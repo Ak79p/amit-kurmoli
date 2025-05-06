@@ -1,186 +1,306 @@
 <!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Stellar by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+  <title>Amit Kurmoli - Freelance QA & Web Engineer</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      animation: fadeIn 0.3s ease-in-out;
+    }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 2rem;
+      border-radius: 1rem;
+      width: 90%;
+      max-width: 500px;
+      animation: slideUp 0.4s ease-out;
+      text-align: left;
+    }
 
-				<!-- Header -->
-				<header id="header" class="alt">
-					<span class="logo"><img src="images/logo.svg" alt="Logo" /></span>
-					<h1>Amit Kurmoli</h1>
-					<p>Freelance Web & QA Engineer<br />
-					Helping businesses build, test, and launch flawless digital experiences.</p>
-				  </header>
+    .close {
+      float: right;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #888;
+      cursor: pointer;
+    }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">Introduction</a></li>
-							<li><a href="#first">Services</a></li>
-							<li><a href="#second">Skills</a></li>
-							<li><a href="#cta">Get Started</a></li>
-						</ul>
-					</nav>
+    .close:hover {
+      color: #000;
+    }
 
-				<!-- Main -->
-					<div id="main">
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
 
-						<!-- Introduction -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-								<div class="content">
-									<header class="major">
-									<h2>Hi, I'm Amit</h2>
-									</header>
-									<p>
-									I’m a freelance QA Engineer specializing in automated, AI-powered testing for websites and mobile apps.
-									I help startups, designers, and developers ensure their digital products are pixel-perfect, responsive, and bug-free—
-									from Figma to final release.
-									</p>
-									<ul class="actions">
-									<li><a href="work.html" class="button">View My Work</a></li>
-									</ul>
-								</div>
-								<span class="image"><img src="images/pic01.jpeg" alt="QA and Web Testing" /></span>
-								</div>
-							</section>
+    .contact-form input,
+	.contact-form textarea {
+	padding: 0.75rem;
+	border: 1px solid #ccc;
+	border-radius: 0.5rem;
+	font-family: inherit;
+	font-size: 1rem;
+	width: 100%;
+	box-sizing: border-box;
+	}
 
-						<!-- Services -->
-							<section id="first" class="main special">
-								<header class="major">
-								<h2>How I Help You Ship Better Products</h2>
-								</header>
-								<ul class="features">
-								<li>
-									<span class="icon solid major style1 fa-bug"></span>
-									<h3>AI-Powered Visual Testing</h3>
-									<p>Catch layout shifts, broken components, and pixel mismatches across devices automatically using smart visual diffing.</p>
-								</li>
-								<li>
-									<span class="icon solid major style3 fa-cogs"></span>
-									<h3>Automated UI/UX QA</h3>
-									<p>Run end-to-end tests with automation tools to validate workflows, user actions, and app responsiveness with minimal manual effort.</p>
-								</li>
-								<li>
-									<span class="icon solid major style5 fa-rocket"></span>
-									<h3>Fast Turnaround & Collaboration</h3>
-									<p>I work closely with devs, designers, and PMs to align quality goals with launch timelines—so your team ships confidently.</p>
-								</li>
-								</ul>
-								<footer class="major">
-								<ul class="actions special">
-									<li><a href="#contact" class="button">Work With Me</a></li>
-								</ul>
-								</footer>
-							</section>
+    .contact-form button {
+		background-color: #2a2f4a;
+		color: #fff;
+		padding: 0.6rem 1rem;
+		border: none;
+		border-radius: 0.4rem;
+		font-size: 1rem;
+		text-align: center;
+		cursor: pointer;
+		width: fit-content;
+		align-self: flex-start;
+		transition: background 0.3s ease;
+	}
 
-						<!-- Skills -->
-							<section id="second" class="main special">
-								<header class="major">
-								<h2>Proven Tools & Real Impact</h2>
-								<p>
-									I've tested dozens of web and mobile products, blending automation, AI, and precision QA to help clients launch faster and better.
-									Whether it’s visual testing from Figma, functional QA for React apps, or regression testing across devices—I tailor my workflow to meet your team’s goals, timelines, and tech stack. Let’s build and test something great together.
-								</p>
-								</header>
-							
-								<ul class="statistics">
-								<li class="style1">
-									<span class="icon solid fa-bug"></span>
-									<strong>500+</strong> Bugs Resolved
-								</li>
-								<li class="style2">
-									<span class="icon solid fa-robot"></span>
-									<strong>12</strong> AI Tools Integrated
-								</li>
-								<li class="style3">
-									<span class="icon solid fa-mobile-alt"></span>
-									<strong>30+</strong> Responsive Projects
-								</li>
-								<li class="style4">
-									<span class="icon solid fa-cogs"></span>
-									<strong>1000+</strong> Tests Automated
-								</li>
-								<li class="style5">
-									<span class="icon solid fa-handshake"></span>
-									<strong>15+</strong> Teams Supported
-								</li>
-								</ul>
-							
-								<footer class="major">
-								<ul class="actions special">
-									<li><a href="#contact" class="button">Let’s Talk</a></li>
-								</ul>
-								</footer>
-							</section>
+    .contact-form button:hover {
+		background-color: #1c1f34;
+	}
 
-						<!-- Get Started -->
-							<section id="cta" class="main special">
-								<header class="major">
-								<h2>Let’s Build Together</h2>
-								<p>Looking for someone who can blend QA expertise with AI tools and automation? I'm ready to help you launch faster and smarter. Reach out and let's talk about your next big idea.</p>
-								</header>
-								<footer class="major">
-								<ul class="actions special">
-									<li><a href="#contact" class="button primary">Let’s Talk</a></li>
-									<li><a href="#portfolio" class="button">See My Work</a></li>
-								</ul>
-								</footer>
-							</section>
+    @keyframes slideUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
 
-					</div>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-						<h2>Let's Collaborate</h2>
-						<p>From AI-powered QA to visual and functional automation, I help startups and businesses deliver polished products faster. Got a project or role in mind? Let’s connect and explore how I can bring value to your team.</p>
-						<ul class="actions">
-							<li><a href="#contact" class="button">Contact Me</a></li>
-						</ul>
-						</section>
-						<section>
-						<h2>Contact Info</h2>
-						<dl class="alt">
-							<dt>Email</dt>
-							<dd><a href="mailto:yourname@email.com">yourname@email.com</a></dd>
-							<dt>Location</dt>
-							<dd>Bangalore, India</dd>
-						</dl>
-						<ul class="icons">
-							<li><a href="https://github.com/yourhandle" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-							<li><a href="https://linkedin.com/in/yourhandle" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
-							<li><a href="mailto:yourname@email.com" class="icon solid fa-envelope alt"><span class="label">Email</span></a></li>
-						</ul>
-						</section>
-						<p class="copyright">
-						&copy; 2025 Amit. Built with love using <a href="https://html5up.net">HTML5 UP</a>.
-						</p>
-					</footer>
+<body class="is-preload">
 
-			</div>
+  <div id="wrapper">
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <!-- Header -->
+    <header id="header" class="alt">
+      <span class="logo"><img src="images/logo.svg" alt="Logo" /></span>
+      <h1>Amit Kurmoli</h1>
+      <p>Freelance Web & QA Engineer<br />
+        Helping businesses build, test, and launch flawless digital experiences.</p>
+    </header>
 
-	</body>
+    <!-- Nav -->
+    <nav id="nav">
+      <ul>
+        <li><a href="#intro" class="active">Introduction</a></li>
+        <li><a href="#first">Services</a></li>
+        <li><a href="#second">Skills</a></li>
+        <li><a href="#cta">Get Started</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+
+      <!-- Introduction -->
+      <section id="intro" class="main">
+        <div class="spotlight">
+          <div class="content">
+            <header class="major">
+              <h2>Hi, I'm Amit</h2>
+            </header>
+            <p>
+              I’m a freelance QA Engineer specializing in automated, AI-powered testing for websites and mobile apps.
+              I help startups, designers, and developers ensure their digital products are pixel-perfect, responsive, and bug-free—
+              from Figma to final release.
+            </p>
+            <ul class="actions">
+              <li><a href="work.html" class="button">View My Work</a></li>
+            </ul>
+          </div>
+          <span class="image"><img src="images/pic01.jpeg" alt="QA and Web Testing" /></span>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="first" class="main special">
+        <header class="major">
+          <h2>How I Help You Ship Better Products</h2>
+        </header>
+        <ul class="features">
+          <li>
+            <span class="icon solid major style1 fa-bug"></span>
+            <h3>AI-Powered Visual Testing</h3>
+            <p>Catch layout shifts, broken components, and pixel mismatches across devices automatically using smart visual diffing.</p>
+          </li>
+          <li>
+            <span class="icon solid major style3 fa-cogs"></span>
+            <h3>Automated UI/UX QA</h3>
+            <p>Run end-to-end tests with automation tools to validate workflows, user actions, and app responsiveness with minimal manual effort.</p>
+          </li>
+          <li>
+            <span class="icon solid major style5 fa-rocket"></span>
+            <h3>Fast Turnaround & Collaboration</h3>
+            <p>I work closely with devs, designers, and PMs to align quality goals with launch timelines—so your team ships confidently.</p>
+          </li>
+        </ul>
+        <footer class="major">
+          <ul class="actions special">
+            <li><a href="#" class="button" id="openModal">Work With Me</a></li>
+          </ul>
+        </footer>
+      </section>
+
+      <!-- Skills -->
+      <section id="second" class="main special">
+        <header class="major">
+          <h2>Proven Tools & Real Impact</h2>
+          <p>
+            I've tested dozens of web and mobile products, blending automation, AI, and precision QA to help clients launch faster and better.
+            Whether it’s visual testing from Figma, functional QA for React apps, or regression testing across devices—I tailor my workflow to meet your team’s goals, timelines, and tech stack. Let’s build and test something great together.
+          </p>
+        </header>
+
+        <ul class="statistics">
+          <li class="style1">
+            <span class="icon solid fa-bug"></span>
+            <strong>500+</strong> Bugs Resolved
+          </li>
+          <li class="style2">
+            <span class="icon solid fa-robot"></span>
+            <strong>12</strong> AI Tools Integrated
+          </li>
+          <li class="style3">
+            <span class="icon solid fa-mobile-alt"></span>
+            <strong>30+</strong> Responsive Projects
+          </li>
+          <li class="style4">
+            <span class="icon solid fa-cogs"></span>
+            <strong>1000+</strong> Tests Automated
+          </li>
+          <li class="style5">
+            <span class="icon solid fa-handshake"></span>
+            <strong>15+</strong> Teams Supported
+          </li>
+        </ul>
+
+        <footer class="major">
+          <ul class="actions special">
+            <li><a href="#" class="button" id="openModal2">Let’s Talk</a></li>
+          </ul>
+        </footer>
+      </section>
+
+      <!-- Get Started -->
+      <section id="cta" class="main special">
+        <header class="major">
+          <h2>Let’s Build Together</h2>
+          <p>Looking for someone who can blend QA expertise with AI tools and automation? I'm ready to help you launch faster and smarter. Reach out and let's talk about your next big idea.</p>
+        </header>
+        <footer class="major">
+          <ul class="actions special">
+            <li><a href="#" class="button primary" id="openModal3">Let’s Talk</a></li>
+            <li><a href="#portfolio" class="button">See My Work</a></li>
+          </ul>
+        </footer>
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <section>
+        <h2>Let's Collaborate</h2>
+        <p>From AI-powered QA to visual and functional automation, I help startups and businesses deliver polished products faster. Got a project or role in mind? Let’s connect and explore how I can bring value to your team.</p>
+        <ul class="actions">
+          <li><a href="#" class="button" id="openModal4">Contact Me</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Contact Info</h2>
+        <dl class="alt">
+          <dt>Email</dt>
+          <dd><a href="mailto:yourname@email.com">yourname@email.com</a></dd>
+          <dt>Location</dt>
+          <dd>Bangalore, India</dd>
+        </dl>
+        <ul class="icons">
+          <li><a href="https://github.com/yourhandle" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+          <li><a href="https://linkedin.com/in/yourhandle" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
+          <li><a href="mailto:yourname@email.com" class="icon solid fa-envelope alt"><span class="label">Email</span></a></li>
+        </ul>
+      </section>
+      <p class="copyright">
+        &copy; 2025 Amit. Built with love using <a href="https://html5up.net">HTML5 UP</a>.
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="modal">
+	<div class="modal-content">
+	  <span class="close">&times;</span>
+	  <h3 style="color: #111;">👋 Hey there!</h3>
+	  <p style="color: #444;">I'd love to hear from you! Drop a message below and I’ll get back soon.</p>
+	  <form action="https://formspree.io/f/yourformid" method="POST" class="contact-form">
+		<input type="text" name="name" placeholder="Enter your name" required />
+		<input type="email" name="email" placeholder="Enter your email" required />
+		<textarea name="message" placeholder="Type your message..." rows="4" required></textarea>
+		<button type="submit">Send Message</button>
+	  </form>
+	</div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    const modal = document.getElementById("contactModal");
+    const closeBtn = document.querySelector(".modal .close");
+
+    document.querySelectorAll("#openModal, #openModal2, #openModal3, #openModal4").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal.style.display = "block";
+      });
+    });
+
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = (event) => {
+      if (event.target == modal) modal.style.display = "none";
+    };
+  </script>
+
+</body>
 </html>
